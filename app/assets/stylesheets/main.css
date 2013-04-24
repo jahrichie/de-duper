@@ -1,0 +1,20 @@
+
+#wrapper {
+  width:980px;
+  margin:20px auto;  
+}
+.textarea {
+  width: 47%;
+  margin: 5px;
+  height: 250px;
+  display: inline;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  resize: none;
+  float: left;
+}  
+
+input[type="submit"] {
+ float: right;
+ margin-right:20px;
+}

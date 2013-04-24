@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>De-Dupe Intersection</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<script type="text/javascript">
+  
+
+$(function() {
+  var clip = new ZeroClipboard.Client();
+});  
+
+
+</script>
+
+</head>
+<body>
+  <div id="wrapper">
+    <%= yield %>
+  </div><!-- wrapper -->
+</body>
+</html>
