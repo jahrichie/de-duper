@@ -11,10 +11,11 @@ gem 'json'
 gem 'twitter-bootstrap-rails'
 gem 'zeroclipboard-rails'
 gem 'heroku'
+gem 'thin'
 
 group :development do
   gem 'sqlite3'
-  gem 'thin'
+
 end
 
 group :production do
