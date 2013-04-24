@@ -6,16 +6,18 @@ class HomeController < ActionController::Base
   end
 
   def intersect 
-
-    @array1       = params[:a].split(',')
-    @array2       = params[:b].split(',')
-    @intersection = @array1 & @array2
-    
-
-    respond_to do |format|       
-      format.html  {render :layout  => 'application'}
-      format.csv { render :layout => false }
+    if params[:a].present? && params[:b].present?
+      @array1       = params[:a].split(',')
+      @array2       = params[:b].split(',')
+      @intersection = @array1 & @array2
     end
+    render :layout  => 'application'
+    
+    # render :layout  => 'application'
+    # respond_to do |format|       
+    #   format.html  {}
+    #   format.csv { render :layout => false }
+    # end
 
   end
 
