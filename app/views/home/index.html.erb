@@ -1,13 +1,19 @@
 <ul class="nav nav-tabs">
   <li class="active"><a href="#">Enter Emails</a></li>
-  <li><a href="/intersect">Results</a></li>
+  <!-- <li><a href="/intersect">Results</a></li> -->
 </ul>
 
 <h1> Paste your two email lists below, comma seperated, no quotes. </h1>
-<%= form_tag("/intersect", :method => "post") do %>
+<%= form_tag("/intersect.csv", :method => "post") do %>
   <%= text_area_tag(:a, nil, :class => 'textarea', :placeholder => 'List 1') %> 
   <%= text_area_tag(:b, nil, :class => 'textarea', :placeholder => 'List 2') %>
-  <%= submit_tag("intersect", :class => 'btn btn-success btn-large' )%>
+  <%= submit_tag("Show results", :class => 'btn btn-success btn-large' )%>
+  
+  <%# link_to "Download CSV", intersect_path(format: "csv"),:class => 'btn btn-success btn-large' %>
+  
+
+   
+
 <% end %>
 
 
