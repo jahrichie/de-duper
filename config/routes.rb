@@ -4,6 +4,7 @@ Yo::Application.routes.draw do
 
   post '/intersect' => "home#intersect"
   get '/intersect' => "home#intersect"
+  get '/intersect/download' => "home#download"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

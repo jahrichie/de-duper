@@ -3,7 +3,7 @@
   <li><a href="/intersect">Results</a></li>
 </ul>
 
-<h1> Paste your two email lists below, comma seperated, no quotes. </h1>
+<h1> Paste your two email lists below straight from excel, no commas, line breaks are kosher. </h1>
 <%= form_tag("/intersect", :method => "post") do %>
   <%= text_area_tag(:a, nil, :class => 'textarea', :placeholder => 'List 1') %> 
   <%= text_area_tag(:b, nil, :class => 'textarea', :placeholder => 'List 2') %>

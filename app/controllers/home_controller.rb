@@ -7,9 +7,10 @@ class HomeController < ActionController::Base
 
   def intersect 
     if params[:a].present? && params[:b].present?
-      @array1       = params[:a].split(',')
-      @array2       = params[:b].split(',')
+      @array1       = params[:a].gsub(/\s+/, ', ').strip.split(',')
+      @array2       = params[:b].gsub(/\s+/, ', ').strip.split(',')
       @intersection = @array1 & @array2
+      session[:intersection] = @intersection
     end
     render :layout  => 'application'
     
@@ -18,7 +19,12 @@ class HomeController < ActionController::Base
     #   format.html  {}
     #   format.csv { render :layout => false }
     # end
-
   end
+  def download
+    respond_to do |format|       
+      # format.csv { render :layout => false }
+      format.csv  { send_data session[:intersection].to_csv  }
 
+    end    
+  end
 end
