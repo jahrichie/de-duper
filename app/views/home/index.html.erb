@@ -2,8 +2,10 @@
   <li class="active"><a href="#">Enter Emails</a></li>
   <li><a href="/intersect">Results</a></li>
 </ul>
+<h1>I take two email lists, and create a third list  of the dupes...paste your excel column  below.</h1>
 
-<h1> Paste your two email lists below straight from excel, no commas, line breaks are kosher. </h1>
+<br />
+
 <%= form_tag("/intersect", :method => "post") do %>
   <%= text_area_tag(:a, nil, :class => 'textarea', :placeholder => 'List 1') %> 
   <%= text_area_tag(:b, nil, :class => 'textarea', :placeholder => 'List 2') %>
