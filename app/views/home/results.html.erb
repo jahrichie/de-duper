@@ -8,7 +8,7 @@
   <pre><%=  @intersection.to_csv.strip.gsub('"',"")    %></pre>
   <br><a href="/results/download.csv?var=intersection"  class="btn btn-success btn-large">Download Duplication List</a>
 <% else %>
-  <h5>You had no duplications</h5>
+  <h5>Something is empty, go back <a href="/">^</a> to Enter Emails</h5>
 <% end %>
 
 <% if  @uniq.present? %>
