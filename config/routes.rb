@@ -2,9 +2,9 @@ Yo::Application.routes.draw do
 
   root :to => "home#index"
 
-  post '/intersect' => "home#intersect"
-  get '/intersect' => "home#intersect"
-  get '/intersect/download' => "home#download"
+  post '/results' => "home#results"
+  get '/results' => "home#results"
+  get '/results/download' => "home#download"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

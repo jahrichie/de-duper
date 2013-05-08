@@ -1,15 +1,15 @@
 <ul class="nav nav-tabs">
   <li class="active"><a href="#">Enter Emails</a></li>
-  <li><a href="/intersect">Results</a></li>
+  <li><a href="/results">Results</a></li>
 </ul>
-<h1>I take two email lists, and create a third list  of the dupes...paste your excel column  below.</h1>
+<h1>I take two email lists, de-dupe into a third, as well as surface any duplciates I found. How cool am I?</h1>
 
 <br />
 
-<%= form_tag("/intersect", :method => "post") do %>
+<%= form_tag("/results", :method => "post") do %>
   <%= text_area_tag(:a, nil, :class => 'textarea', :placeholder => 'List 1') %> 
   <%= text_area_tag(:b, nil, :class => 'textarea', :placeholder => 'List 2') %>
-  <%= submit_tag("intersect", :class => 'btn btn-success btn-large' )%>
+  <%= submit_tag("get results", :class => 'btn btn-success btn-large' )%>
 <% end %>
 
 

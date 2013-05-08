@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs">
+  <li><a href="/">Enter Emails</a></li>
+  <li class="active"><a href="#">Results</a></li>
+</ul><h1> Results:  </h1>
+
+<% if  @intersection.present? %>
+  <h3> Your duplicates: </h3>
+  <pre><%=  @intersection.to_csv.strip.gsub('"',"")    %></pre>
+  <br><a href="/results/download.csv?var=intersection"  class="btn btn-success btn-large">Download Duplication List</a>
+<% else %>
+  <h5>You had no duplications</h5>
+<% end %>
+
+<% if  @uniq.present? %>
+  <h3> Your de-duped list: </h3>
+  <pre><%=  @uniq.to_csv.strip.gsub('"'," ")    %></pre>
+  <br><br><a href="/results/download.csv?var=uniq" class="btn btn-success btn-large">Download De-duped List</a>
+<% end %>
+
